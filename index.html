@@ -702,7 +702,8 @@
 
     /* Ceremony illustration */
     .cer-art {
-      height: clamp(120px, 18vw, 180px);
+      width: 100%;
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -721,7 +722,8 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(0deg, rgba(19, 9, 0, .6), transparent 60%);
+      background: linear-gradient(0deg, rgba(19, 9, 0, .4), transparent 80%);
+      pointer-events: none;
     }
 
     .cer-body {
@@ -1014,6 +1016,12 @@
         </g>
       </g>
     </svg>
+    
+    <!-- Lord Ganesha Image -->
+    <div style="text-align: center; margin-top: 30px; margin-bottom: 10px; z-index: 2; position: relative;">
+      <img src="ganesh.png" alt="Shree Ganeshay Namah" style="width: 120px; filter: drop-shadow(0px 0px 8px rgba(201, 168, 76, 0.4));" onerror="this.src='https://cdn-icons-png.flaticon.com/512/3595/3595568.png'">
+    </div>
+<br><br><br>
     <!-- Mantra -->
     <div class="hero-mantra" id="heroMantra">
       मंगलम् भगवान विष्णु मंगलम् गरुड़ध्वज<br />
@@ -1169,7 +1177,7 @@
             <div class="family-line">
               <strong>Granddaughter of:</strong><br />
               Late Shri Lal Babu Gupta<br />
-              &amp; Late Smt. Sri Devi<br /><br />
+              &amp; Late Smt. Devi<br /><br />
               <strong>Daughter of:</strong><br />
               Shri Rajesh Gupta<br />
               &amp; Smt. Babita Gupta
@@ -1189,40 +1197,6 @@
 
   <div class="band"></div>
 
-  <!-- ══ COUPLE CARICATURE ══ -->
-  <section id="couple" class="S">
-    <div class="SI">
-      <div class="sec-head rv">
-        <span class="en">The Couple</span>
-        <span class="hi">वर-वधू</span>
-        <div class="ornament"><span></span><i>✦</i><span></span></div>
-      </div>
-
-      <div class="caricature-wrap" id="coupleWrap">
-        <!-- Groom caricature -->
-        <div class="caricature-card">
-          <div class="caricature-svg-wrap" style="overflow: hidden; border-radius: 15px;">
-            <img src="groom.jpeg" alt="Groom" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-          </div>
-          <div class="caricature-name">Aadarsh Gupta</div>
-          <div class="caricature-sub">Forbesganj, Bihar</div>
-        </div>
-        <!-- Ampersand -->
-        <div class="couple-amp">&amp;</div>
-        <!-- Bride caricature -->
-        <div class="caricature-card">
-          <div class="caricature-svg-wrap" style="overflow: hidden; border-radius: 15px;">
-            <img src="bride.jpeg" alt="Bride" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-          </div>
-          <div class="caricature-name">Nikita Gupta</div>
-          <div class="caricature-sub">Mau, Uttar Pradesh</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="band"></div>
-
   <!-- ══ CEREMONIES ══ -->
   <section id="ceremonies" class="S">
     <div class="SI">
@@ -1236,9 +1210,9 @@
 
         <!-- 1. Haldi Katha Matkor -->
         <div class="cer-card">
-          <div class="cer-art" style="background:linear-gradient(135deg,#2A1800,#3D2400);">
-            <img src="haldi-couples-wedding-goal-ceremony-260nw-2349308419.webp" alt="Haldi Ceremony"
-              style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          <div class="cer-art">
+            <img src="haldi-couples-wedding-goal-ceremony.jpg" alt="Haldi Ceremony"
+              style="width: 100%; height: auto; display: block;" />
           </div>
           <div class="cer-body">
             <span class="cer-emoji">🌿</span>
@@ -1256,9 +1230,9 @@
 
         <!-- 2. Sangeet Night -->
         <div class="cer-card">
-          <div class="cer-art" style="background:linear-gradient(135deg,#100528,#1A083C);">
+          <div class="cer-art">
             <img src="indian-bride-groom-traditional-wedding-260nw-2723100851.jpg" alt="Sangeet Night"
-              style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              style="width: 100%; height: auto; display: block;" />
           </div>
           <div class="cer-body">
             <span class="cer-emoji">🎶</span>
@@ -1276,9 +1250,9 @@
 
         <!-- 3. Shubh Vivah & Reception -->
         <div class="cer-card">
-          <div class="cer-art" style="background:radial-gradient(ellipse at 50% 60%,#2A0E00,#0D0500);">
+          <div class="cer-art">
             <img src="images.jpg" alt="Shubh Vivah"
-              style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+              style="width: 100%; height: auto; display: block;" />
           </div>
           <div class="cer-body">
             <span class="cer-emoji">💍</span>
@@ -1354,23 +1328,14 @@
         <div class="closing-emojis">🌸🪔🌼🙏🌼🪔🌸</div>
 
         <div
-          style="margin-top:32px;padding:20px;border:1px solid rgba(201,168,76,.2);border-radius:12px;background:rgba(201,168,76,.04);">
+          style="margin-top:15px;padding:10px;border:1px solid rgba(201,168,76,.2);border-radius:10px;background:rgba(201,168,76,.04);">
           <p
-            style="font-family:'Noto Sans Devanagari',sans-serif;font-size:clamp(13px,1.7vw,18px);color:var(--gold);opacity:.85;line-height:1.9;">
-            || शुभ मंगल सावधान ||
+            style="font-family:'Noto Sans Devanagari',sans-serif;font-size:clamp(14px,1.8vw,19px);color:var(--gold2);text-align:center;line-height:1.8;margin-top:20px;font-weight:500;text-shadow: 0 0 15px rgba(201,168,76,0.3);">
+            वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ |<br>
+            निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
           </p>
-          <p
-            style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(13px,1.6vw,17px);color:rgba(251,245,230,.5);margin-top:4px;">
-            Wishing Aadarsh &amp; Nikita a lifetime of happiness &amp; togetherness
-          </p>
+          
         </div>
-
-        <!-- Ganesha Mantra -->
-        <p
-          style="font-family:'Noto Sans Devanagari',sans-serif;font-size:clamp(14px,1.8vw,19px);color:var(--gold2);text-align:center;line-height:1.8;margin-top:28px;font-weight:500;text-shadow: 0 0 15px rgba(201,168,76,0.3);">
-          वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ |<br />
-          निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा॥
-        </p>
 
       </div>
     </div>
